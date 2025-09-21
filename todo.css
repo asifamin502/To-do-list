@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+
+
+}
+
+.todoapp header{
+    text-align: center;
+    padding: 20px 0;
+    background: url('headbg.jpg') no-repeat center;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.todoapp header h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+.todoapp header .new-todo{
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+.todoapp header .new-todo:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+     transition: 0.5s;
+}
+.todoapp header button{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+.todoapp header button:hover{
+   
+    background-color: #065017;
+    transition: 0.5s;
+   
+}
+
+
+.main{
+   
+    margin: 5%;
+}
+.main h1{
+    
+    
+    margin-bottom: 20px;
+    text-decoration: dashed underline;
+    
+    
+}
+
+.todo-list_lists{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+.todo-list_lists button{
+    
+    
+    cursor: pointer;
+  border-radius: 10px;
+    font-size: 2rem;
+    transition: 1s;
+}
+.todo-list_lists button:hover{
+    color: red;
+    transition: 0.5s;
+}
+.todo-list li{
+    
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .date{
+    font-size: 1rem;
+    color: grey;
+   
+    font-weight: normal;
+}
