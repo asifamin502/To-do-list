@@ -7,16 +7,7 @@ const selectsectionmain = todoapp.querySelector('.main');
 const deletebtn=selectsectionmain.querySelector('.delete');
  */
 
-const time= new Date();
-const month= time.getMonth()+1;
-const date= time.getDate();
-const year= time.getFullYear();
-const fulldate= `${date}-${month}-${year}`;
 
-const ttime= time.getHours();
-const tmin= time.getMinutes();
-
-const fulltime= `${ttime}:${tmin}`;
 
 
 addbutton.addEventListener("click", (event)=>{
@@ -30,13 +21,40 @@ addbutton.addEventListener("click", (event)=>{
    }
 
 
+
+
    const createli= document.createElement("li");
    createli.classList.add("todo-list_lists");
-createli.innerHTML=inputtext.value;
 
+
+
+
+
+   const textspan= document.createElement("span");
+  
+   textspan.innerText=inputtext.value;
+   
 const createdate=document.createElement("p");
 createdate.classList.add("date");
+
+
+   const time= new Date();
+const month= time.getMonth()+1;
+const date= time.getDate();
+const year= time.getFullYear();
+const fulldate= `${date}-${month}-${year}`;
+
+const ttime= time.getHours();
+const tmin= time.getMinutes();
+
+const fulltime= `${ttime}:${tmin}`;
 createdate.innerText=`Last Created: ${fulldate} , ${fulltime}`;
+
+
+
+
+
+
 
 
    const createbtnedt= document.createElement("button");
@@ -48,7 +66,7 @@ createdate.innerText=`Last Created: ${fulldate} , ${fulltime}`;
     createbtndel.innerHTML=`<i class="fa-duotone fa-solid fa-eraser"></i>`;
 
 
-
+createli.appendChild(textspan);
       createli.appendChild(createdate);
     createli.appendChild(createbtnedt);
   
@@ -63,7 +81,7 @@ inputtext.value="";
 
 /* edit button */
 createbtnedt.addEventListener("click", ()=>{
-inputtext.value=createli.innerText;
+inputtext.value=textspan.innerText;
 
 
 
